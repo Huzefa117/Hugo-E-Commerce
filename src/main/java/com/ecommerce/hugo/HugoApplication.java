@@ -7,7 +7,6 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class HugoApplication {
 
 	public static void main(String[] args) {
-
 		SpringApplication.run(HugoApplication.class, args);
 	}
 
