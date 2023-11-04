@@ -1,7 +1,5 @@
 package com.ecommerce.hugo;
 
-import com.ecommerce.hugo.model.Product;
-import com.ecommerce.hugo.staticConstants.staticDetails.*;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
