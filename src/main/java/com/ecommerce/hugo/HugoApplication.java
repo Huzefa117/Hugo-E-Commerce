@@ -20,6 +20,7 @@ public class HugoApplication {
 			public void addCorsMappings(CorsRegistry registry) {
 				registry.addMapping("/**")
 								.allowedOrigins("http://localhost:4200")
+								.allowedOrigins("https://hugo-web-client.vercel.app/")
 								.allowedMethods("GET", "POST", "PUT", "DELETE")
 								.allowedHeaders("Origin", "X-Requested-With", "Content-Type", "Accept", "Authorization")
 								.maxAge(3600); // Optional: define max age for CORS preflight requests
