@@ -20,7 +20,11 @@ public class UserController {
 
   @PostMapping(value = "/signupUser")
   public User signupUser(@RequestBody User userAccount){
-    //return null;
     return userInterface.saveUser(userAccount);
+  }
+
+  @PostMapping(value = "/verifyUser")
+  public Map<String, Object> verifyUser(@RequestBody Map<String, String> userMap){
+    return  userInterface.getUserByEmail(userMap);
   }
 }

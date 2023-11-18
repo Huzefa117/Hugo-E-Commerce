@@ -30,6 +30,7 @@ dependencies {
 	implementation 'com.azure.spring:spring-cloud-azure-starter'
 	implementation 'org.hibernate:hibernate-core:6.1.7.Final' // Use the latest version
 	implementation 'com.microsoft.sqlserver:mssql-jdbc:12.2.0.jre11' // Use the latest version
+	//implementation 'mysql:mysql-connector-java:8.0.33'
 
 	annotationProcessor 'org.projectlombok:lombok'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
