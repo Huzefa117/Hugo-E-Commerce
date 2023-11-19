@@ -1,6 +1,8 @@
 package com.ecommerce.hugo.service.UserService;
 
+import com.ecommerce.hugo.model.Seller;
 import com.ecommerce.hugo.model.User;
+import com.ecommerce.hugo.repository.Seller.SellerRepo;
 import com.ecommerce.hugo.repository.User.UserRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -15,10 +17,19 @@ public class UserServiceImpl implements UserInterface{
   @Autowired
   private UserRepo userRepo;
 
+  @Autowired
+  private SellerRepo sellerRepo;
+
   @Override
   public User saveUser(User user) {
     return userRepo.save(user);
   }
+
+  @Override
+  public Seller saveSeller(Seller account) {
+    return sellerRepo.save(account);
+  }
+
 
   @Override
   public Map<String, Object> getUserByEmail(Map<String, String> userMap) {
@@ -32,7 +43,7 @@ public class UserServiceImpl implements UserInterface{
           User user = userList.get(0);
           if (user.getPassword().equals(password)){
             resultMap.put("id", user.getId());
-            resultMap.put("name", user.getName());
+            resultMap.put("name", user.getUserName());
             resultMap.put("email", user.getEmail());
           }else{
             resultMap.put("message", "Invalid Credentials");

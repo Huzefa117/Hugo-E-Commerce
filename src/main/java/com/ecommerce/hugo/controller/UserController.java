@@ -1,5 +1,6 @@
 package com.ecommerce.hugo.controller;
 
+import com.ecommerce.hugo.Helper.UserHelper;
 import com.ecommerce.hugo.model.User;
 import com.ecommerce.hugo.service.UserService.UserInterface;
 import com.ecommerce.hugo.service.UserService.UserServiceImpl;
@@ -18,9 +19,12 @@ public class UserController {
   @Autowired
   private UserInterface userInterface;
 
+  @Autowired
+  private UserHelper userHelper;
+
   @PostMapping(value = "/signupUser")
-  public User signupUser(@RequestBody User userAccount){
-    return userInterface.saveUser(userAccount);
+  public Map<String, Object> signupUser(@RequestBody Map<String, String> userMap){
+    return userHelper.saveAccountDetails(userMap);
   }
 
   @PostMapping(value = "/verifyUser")
