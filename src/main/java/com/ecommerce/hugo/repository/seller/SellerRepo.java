@@ -1,4 +1,4 @@
-package com.ecommerce.hugo.repository.Seller;
+package com.ecommerce.hugo.repository.seller;
 
 import com.ecommerce.hugo.model.Seller;
 import org.springframework.data.jpa.repository.JpaRepository;

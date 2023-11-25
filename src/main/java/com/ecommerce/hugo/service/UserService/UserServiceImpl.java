@@ -2,8 +2,8 @@ package com.ecommerce.hugo.service.UserService;
 
 import com.ecommerce.hugo.model.Seller;
 import com.ecommerce.hugo.model.User;
-import com.ecommerce.hugo.repository.Seller.SellerRepo;
-import com.ecommerce.hugo.repository.User.UserRepo;
+import com.ecommerce.hugo.repository.seller.SellerRepo;
+import com.ecommerce.hugo.repository.user.UserRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

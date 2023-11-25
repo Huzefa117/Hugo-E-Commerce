@@ -1,9 +1,7 @@
 package com.ecommerce.hugo.controller;
 
-import com.ecommerce.hugo.Helper.UserHelper;
-import com.ecommerce.hugo.model.User;
+import com.ecommerce.hugo.helper.UserHelper;
 import com.ecommerce.hugo.service.UserService.UserInterface;
-import com.ecommerce.hugo.service.UserService.UserServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;

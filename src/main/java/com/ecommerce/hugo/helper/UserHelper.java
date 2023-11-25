@@ -1,4 +1,4 @@
-package com.ecommerce.hugo.Helper;
+package com.ecommerce.hugo.helper;
 
 
 import com.ecommerce.hugo.model.Seller;
@@ -9,6 +9,9 @@ import org.springframework.stereotype.Service;
 
 import java.util.HashMap;
 import java.util.Map;
+
+import static com.ecommerce.hugo.constants.WebConstants.customer;
+import static com.ecommerce.hugo.constants.WebConstants.seller;
 
 @Service
 public class UserHelper {
@@ -22,7 +25,7 @@ public class UserHelper {
      String password = userMap.get("password");
      String email = userMap.get("email");
      String address = userMap.get("address");
-     String type = userMap.get("type");
+     String type = (userMap.get("type").equals("seller")) ? seller : customer;
      String phoneNumber = userMap.get("phoneNumber");
 
      User user = User.builder()
