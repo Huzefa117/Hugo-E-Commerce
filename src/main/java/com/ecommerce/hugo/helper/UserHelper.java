@@ -34,7 +34,7 @@ public class UserHelper {
                 .type(type).phoneNumber(phoneNumber).build();
      User savedUser = userInterface.saveUser(user);
 
-     if(type.equals("seller")){
+     if(userMap.get("type").equals("seller")){
        String businessInfo = userMap.get("businessInfo");
        Seller seller = Seller.builder().userId(savedUser.getId()).businessInfo(businessInfo).build();
        Seller savedSeller = userInterface.saveSeller(seller);
