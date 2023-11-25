@@ -42,9 +42,9 @@ public class UserServiceImpl implements UserInterface{
         if (!userList.isEmpty() && userList != null) {
           User user = userList.get(0);
           if (user.getPassword().equals(password)){
-            resultMap.put("id", user.getId());
+            resultMap.put("userId", user.getId());
             resultMap.put("name", user.getUserName());
-            resultMap.put("email", user.getEmail());
+            resultMap.put("type", user.getType());
           }else{
             resultMap.put("message", "Invalid Credentials");
           }
